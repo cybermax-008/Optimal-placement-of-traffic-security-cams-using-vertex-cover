@@ -2,7 +2,7 @@
   
 This work belongs to the coursework done by me for, ECE650: Methods and Tools for software Engineering, University of Waterloo.  
 **Languages used:**  
-- Python 3
+- Python 2
 - C++  
 ## Overview
 The project is to help the local police department with their installation of security cameras at traffic intersections.
