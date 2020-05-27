@@ -1,0 +1,158 @@
+Marking #90: StudentInfo(repo='uw-ece650-f19-a3-cybermax-008', first='SURYA', last='MURUGAIAN', watiam='SMURUGAI', studentid=20815071, email='smurugaian@uwaterloo.ca')
+Mark = 0
+
+Running test 0 (idle run, try not to crash):	
+ +20 (/20)
+Running test 1 (idle run, check if output is valid, expect to get 3 graphs):
+
+Output is:
+--------------
+V 34
+E {<2,12>,<12,10>,<10,8>,<8,0>,<0,5>,<5,1>,<16,15>,<15,18>,<18,19>,<19,2>,<22,20>,<20,21>,<25,26>,<26,24>,<24,22>,<3,15>,<15,17>,<4,0>,<0,27>,<27,28>,<28,18>,<18,3>,<30,29>,<29,31>,<31,4>,<7,5>,<5,6>,<9,27>,<27,8>,<8,32>,<32,29>,<29,7>,<11,24>,<24,33>,<33,10>,<10,28>,<28,9>,<13,26>,<26,20>,<20,23>,<14,31>,<31,32>,<32,33>,<33,12>,<12,19>,<19,13>}
+V 26
+E {<2,0>,<0,5>,<5,1>,<10,8>,<8,9>,<13,12>,<12,10>,<3,7>,<4,0>,<0,14>,<14,3>,<11,15>,<15,8>,<8,12>,<12,4>,<20,18>,<18,19>,<22,21>,<21,23>,<23,20>,<17,21>,<21,15>,<15,16>,<25,23>,<23,24>,<7,14>,<14,5>,<5,18>,<18,6>}
+V 14
+E {<2,0>,<0,5>,<5,1>,<9,7>,<7,8>,<11,7>,<7,13>,<13,12>,<12,10>,<4,12>,<12,0>,<0,3>,<6,5>,<5,13>,<13,4>}
+--------------
+
+Status:	Graph validation succeeded
+Parse result:
+	(34, [(2, 12), (12, 10), (10, 8), (8, 0), (0, 5), (5, 1), (16, 15), (15, 18), (18, 19), (19, 2), (22, 20), (20, 21), (25, 26), (26, 24), (24, 22), (3, 15), (15, 17), (4, 0), (0, 27), (27, 28), (28, 18), (18, 3), (30, 29), (29, 31), (31, 4), (7, 5), (5, 6), (9, 27), (27, 8), (8, 32), (32, 29), (29, 7), (11, 24), (24, 33), (33, 10), (10, 28), (28, 9), (13, 26), (26, 20), (20, 23), (14, 31), (31, 32), (32, 33), (33, 12), (12, 19), (19, 13)])
+	(26, [(2, 0), (0, 5), (5, 1), (10, 8), (8, 9), (13, 12), (12, 10), (3, 7), (4, 0), (0, 14), (14, 3), (11, 15), (15, 8), (8, 12), (12, 4), (20, 18), (18, 19), (22, 21), (21, 23), (23, 20), (17, 21), (21, 15), (15, 16), (25, 23), (23, 24), (7, 14), (14, 5), (5, 18), (18, 6)])
+	(14, [(2, 0), (0, 5), (5, 1), (9, 7), (7, 8), (11, 7), (7, 13), (13, 12), (12, 10), (4, 12), (12, 0), (0, 3), (6, 5), (5, 13), (13, 4)])
+Test 1 mark: +15 (/15)
+Running test 2 (Error check arguments):
+	running: ./ece650-a3 -l 1
+
+Output is:
+--------------
+
+--------------
+Error not reported!
+ Expected to find: "Error: error message"
+Test 2 mark: +0 (/5)
+Running test 3 (idle run, check if output is valid):
+
+Output is:
+--------------
+
+No output
+
+--------------
+
+Test 3 mark:, +0 (/20)
+Running test 4 (check if rgen produces valid output, expect to get 3 graphs):
+	run: ./rgen -l 6 -s 3 -n 3 -c 10
+
+Output is:
+--------------
+a "Street A" (-1,-10) (7,1) (-7,-5) 
+a "Street B" (10,-8) (-7,-7) 
+g
+r "Street A" 
+r "Street B" 
+Error:No valid graph generated- Zero Vertices produced
+r "Street A" 
+r "Street B" 
+Error:No valid graph generated- Zero Vertices produced
+r "Street A" 
+r "Street B" 
+a "Street A" (-9,-6) (-4,8) (-6,0) 
+a "Street B" (-3,9) (3,5) 
+a "Street C" (-8,-1) (7,-4) (-3,8) (10,2) 
+g
+r "Street A" 
+r "Street B" 
+r "Street C" 
+Error:No valid graph generated- Zero Vertices produced
+r "Street A" 
+r "Street B" 
+Error:No valid graph generated- Zero Vertices produced
+r "Street A" 
+r "Street B" 
+r "Street C" 
+a "Street A" (0,8) (-5,9) 
+a "Street B" (-4,0) (4,4) (5,-1) 
+a "Street C" (5,2) (-8,0) (-9,5) (-7,8) 
+g
+
+--------------
+Output without errors:
+
+--------------
+a "Street A" (-1,-10) (7,1) (-7,-5) 
+a "Street B" (10,-8) (-7,-7) 
+g
+r "Street A" 
+r "Street B" 
+r "Street A" 
+r "Street B" 
+r "Street A" 
+r "Street B" 
+a "Street A" (-9,-6) (-4,8) (-6,0) 
+a "Street B" (-3,9) (3,5) 
+a "Street C" (-8,-1) (7,-4) (-3,8) (10,2) 
+g
+r "Street A" 
+r "Street B" 
+r "Street C" 
+r "Street A" 
+r "Street B" 
+r "Street A" 
+r "Street B" 
+r "Street C" 
+a "Street A" (0,8) (-5,9) 
+a "Street B" (-4,0) (4,4) (5,-1) 
+a "Street C" (5,2) (-8,0) (-9,5) (-7,8) 
+g
+
+--------------
+Validation result:
+s 2 n 2 x 10 y 10
+Error: r specified a street that does not exist
+Error: r specified a street that does not exist
+Error: r specified a street that does not exist
+Error: r specified a street that does not exist
+s 3 n 3 x 10 y 9
+Error: r specified a street that does not exist
+Error: r specified a street that does not exist
+Error: r specified a street that does not exist
+Error: r specified a street that does not exist
+Error: r specified a street that does not exist
+s 3 n 3 x 9 y 9
+
+Found unexpected "Error:"
+Test 4 mark: +10 (/20)
+Running test 5 (replace rgen, check shortest path):
+Replaced rgen returned:
+
+            a "Weber Street" (2,-1) (2,2) (5,5) (5,6) (3,8)
+            a "King Street S" (4,2) (4,8)
+            a "Davenport Road" (1,4) (5,8)
+            g
+        
+Output is:
+--------------
+V 10
+E {<2,5>,<5,0>,<0,1>,<4,0>,<0,3>,<7,5>,<5,6>,<9,5>,<5,8>}
+
+~~~~~
+Status:	Graph validation succeeded
+Sending queries:
+s 0 7
+s 3 7
+~~~~~
+
+0-5-7
+3-0-5-7
+
+
+--------------
+
+Test 5 mark: +20 (/20)
+
+
+--------------
+Finished marking
+Total mark: 65 / 100
+Final mark: 65
